@@ -72,7 +72,7 @@
 <body>
 <main>
   <h1>Privacy policy</h1>
-  <p class="updated">Last updated: October 10, 2026</p>
+  <p class="updated">Last updated: October 11, 2026</p>
 
   <section>
     <p>Wealthy-ish ("the app") is a personal net-worth tracker. This policy covers the iOS app.</p>
@@ -80,24 +80,37 @@
 
   <section>
     <h2>The short version</h2>
-    <p class="lead">Wealthy-ish does not collect, sell or share your data. There are no accounts, analytics, ads or tracking.</p>
+    <p class="lead">Wealthy-ish does not sell or share your data. There are no accounts, analytics, ads or tracking. If you choose to connect a bank, your balances come through Plaid and the app’s bank sync server, which stores nothing.</p>
   </section>
 
   <section>
     <h2>What the app stores and where</h2>
     <ul>
       <li><strong>On your device.</strong> The accounts, balances, cash flow, goals and settings you enter are stored in the app's private storage on your iPhone.</li>
-      <li><strong>In your iCloud account (optional).</strong> With iCloud sync on (Settings in the app: More › iCloud sync), the same data is stored in Apple's iCloud key-value store under your Apple ID so your devices stay in sync. Apple handles this storage under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>. The developer has no access to it.</li>
+      <li><strong>In your iCloud account (optional).</strong> With iCloud sync on (in the app: Menu › iCloud sync), the same data is stored in Apple's iCloud key-value store under your Apple ID so your devices stay in sync. Apple handles this storage under <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>. The developer has no access to it.</li>
     </ul>
   </section>
 
   <section>
     <h2>What the app does not do</h2>
     <ul>
-      <li>It never connects to banks, brokerages or other financial services, and never asks for account passwords.</li>
+      <li>It never asks for your bank password. Bank connections are optional and go through Plaid (below).</li>
       <li>If you connect <strong>Apple Wallet</strong>, it reads the balances of the Apple Card, Apple Cash or Savings accounts you choose through Apple’s FinanceKit, on your iPhone only. Those balances are stored with the rest of your data (on device and, if on, your iCloud) and are never sent to the developer or any third party. You can turn access off in Settings at any time.</li>
       <li>It does not use analytics, crash reporting, advertising or tracking SDKs.</li>
-      <li>It makes no network requests to the developer or any third party.</li>
+      <li>Without a bank connection, it makes no network requests to the developer or any third party.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Bank connections (optional)</h2>
+    <p>If you connect a bank, card or brokerage (Menu &rsaquo; Bank connections), the app uses <strong>Plaid</strong> to read your account balances:</p>
+    <ul>
+      <li>You sign in on your bank's own page inside Plaid's secure window. The app and the developer never see your bank username or password.</li>
+      <li>Plaid sends the app's bank sync server an access key for that connection. The server encrypts it and gives the encrypted copy to your iPhone, which keeps it in the Keychain. The server stores nothing: no keys, no balances, no account details.</li>
+      <li>About once a day, the app asks the server for your latest balances; the server fetches them from Plaid and passes them straight back. Balances are then stored with the rest of your data (on your device and, if on, your iCloud).</li>
+      <li>Only balances and account names are used. The app doesn't read transactions or move money.</li>
+      <li>Plaid handles your data under <a href="https://plaid.com/legal/#end-user-privacy-policy">Plaid's End User Privacy Policy</a>. Plaid's SDK uses an anonymous ID for this app's connections.</li>
+      <li>Disconnect any time in Menu &rsaquo; Bank connections. This removes the connection at Plaid and the key from your iPhone.</li>
     </ul>
   </section>
 
@@ -108,7 +121,7 @@
 
   <section>
     <h2>Calendar and Reminders</h2>
-    <p>If you turn on the Lock Screen agenda card, the app reads your calendars' events for the next 30 days and your unfinished reminders, and shows today's and the next upcoming events and reminders on your Lock Screen. They are read on your device each time you open the app and are never stored, synced or sent anywhere. You can turn the card off in More &rsaquo; Widgets, and remove access in iOS Settings.</p>
+    <p>If you turn on the Lock Screen agenda card, the app reads your calendars' events for the next 30 days and your unfinished reminders, and shows today's and the next upcoming events and reminders on your Lock Screen. They are read on your device each time you open the app and are never stored, synced or sent anywhere. You can turn the card off in Menu &rsaquo; Widgets, and remove access in iOS Settings.</p>
   </section>
 
   <section>
@@ -128,7 +141,7 @@
 
   <section>
     <h2>Deleting your data</h2>
-    <p>More › Import &amp; export › Erase all data removes everything from the device and from iCloud. Deleting the app removes the on-device copy.</p>
+    <p>Menu › Import &amp; export › Erase all data removes everything from the device and from iCloud. Deleting the app removes the on-device copy.</p>
   </section>
 
   <section>
